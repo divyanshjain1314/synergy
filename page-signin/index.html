@@ -1,0 +1,145 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title tenant="Granco Federal Credit Union">
+      Granco Federal Credit Union - Log On
+    </title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="app" class="shell">
+      <div class="header">
+        <div class="content">
+          <div class="header-logo">
+            <img
+              src="assets/headerLogo.png"
+              alt="Granco Federal Credit Union"
+            />
+          </div>
+          <div class="utility-actions"></div>
+        </div>
+      </div>
+
+      <div class="content-area">
+        <section class="content-area__content login">
+          <h1 class="section-title">Log On</h1>
+          <form class="banking-form">
+            <div
+              role="alert"
+              class="validation-summary-errors alert alert-danger fade show"
+              style="display: none"
+            >
+              <i class="fa fa-exclamation-circle"></i>
+              <span class="alert-message"
+                >Correct the highlighted field(s) below.</span
+              >
+            </div>
+
+            <div class="panel login">
+              <div class="login-form-controls">
+                <div class="form-group">
+                  <label>
+                    <span class="label">Logon ID:</span>
+                    <input
+                      name="Username"
+                      autocomplete="off"
+                      class="control"
+                      type="text"
+                      aria-describedby="username-error"
+                    />
+                  </label>
+                  <span
+                    id="username-error"
+                    role="alert"
+                    class="field-validation-error"
+                    style="display: none"
+                  ></span>
+                </div>
+
+                <div class="form-group">
+                  <label>
+                    <span class="label">Security Code:</span>
+                    <div class="password-container">
+                      <input
+                        name="Password"
+                        type="password"
+                        class="control"
+                        autocomplete="off"
+                        aria-describedby="password-error"
+                      />
+                      <span class="toggle-password">
+                        <i class="fa fa-eye-slash"></i>
+                      </span>
+                    </div>
+                  </label>
+                  <span
+                    id="password-error"
+                    role="alert"
+                    class="field-validation-error"
+                    style="display: none"
+                  ></span>
+                </div>
+
+                <div class="form-actions">
+                  <button
+                    type="submit"
+                    id="logonButton"
+                    class="btn-logon button"
+                  >
+                    Log On
+                  </button>
+                </div>
+              </div>
+
+              <div class="other-actions login">
+                <div class="action">
+                  <div tabindex="0" class="prompt">First time user?</div>
+                  <a href="#" class="link">Enroll in online banking</a>
+                </div>
+                <div class="action">
+                  <div tabindex="0" class="prompt">Forgot security code?</div>
+                  <a href="#" class="link">Reset security code</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <div class="top-footer">
+          <div class="content content-top-footer">
+            <div class="wrapper-top-footer">
+              <ul class="link-footer-wrapper">
+                <li><a href="#" class="external-link">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="wrapper-top-footer">
+              <ul class="externalLink-footer-links">
+                <li><a href="#" class="external-link">Home</a></li>
+                <li><a href="#" class="external-link">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-footer">
+          <div class="content">
+            <img src="assets/ncuaLogoImage.png" alt="NCUA" class="ncua-Logo" />
+            <img src="assets/ehlLogoImage.png" alt="EHL" class="ehl-Logo" />
+            <div class="footer-copyright">
+              <div>Copyright ©2026 Fiserv, Inc. All rights reserved.</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
