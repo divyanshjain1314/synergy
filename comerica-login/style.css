@@ -748,7 +748,7 @@
     text-indent: -99999px;
     overflow: hidden;
     background-repeat: no-repeat;
-    background-image: url(https://webbanking.comerica.com/Comerica/Themes/NewUI/Images/reveal.png);
+    background-image: url(assets/images/reveal.png);
   }
   span.iconReveal {
     position: relative;
