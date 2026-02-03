@@ -5,7 +5,6 @@ function handleDestinationChange() {
   if (!destinationSelect || !defaultPageCheckbox) return;
 
   const isFirstOptionSelected = destinationSelect.selectedIndex === 0;
-
   defaultPageCheckbox.disabled = isFirstOptionSelected;
   defaultPageCheckbox.checked = false;
 }
@@ -26,75 +25,74 @@ document.addEventListener("DOMContentLoaded", () => {
   const destinationSelect = document.getElementById("destinationSelect");
   const defaultPageCheckbox = document.getElementById("makeDefaultCheckbox");
 
+  // Initial State: Button ko disable rakhein
+  loginButton.disabled = true;
+
+  const toggleButtonState = () => {
+    const userIdValue = userIdInput.value.trim();
+    const passwordValue = passwordInput.value.trim();
+
+    // Agar dono mein text hai to disabled = false, warna true
+    loginButton.disabled = !(userIdValue && passwordValue);
+  };
+
+  if (userIdInput && passwordInput) {
+    userIdInput.addEventListener("input", () => {
+      toggleButtonState();
+      hideError();
+    });
+
+    passwordInput.addEventListener("input", () => {
+      toggleButtonState();
+      hideError();
+    });
+  }
+
   if (destinationSelect) {
     destinationSelect.addEventListener("change", handleDestinationChange);
   }
-
-  const toggleButtonState = () => {
-    const isUserIdValid = userIdInput.value.trim().length > 0;
-    const isPasswordValid = passwordInput.value.trim().length > 0;
-
-    loginButton.disabled = !(isUserIdValid && isPasswordValid);
-  };
-
-  userIdInput.addEventListener("input", toggleButtonState);
-  passwordInput.addEventListener("input", toggleButtonState);
 
   if (revealPasswordIcon) {
     revealPasswordIcon.addEventListener("click", () => {
       const isPassword = passwordInput.type === "password";
       passwordInput.type = isPassword ? "text" : "password";
-
       revealPasswordIcon.classList.toggle("isVisible");
     });
   }
-
-  destinationSelect.addEventListener("change", function () {
-    const isDefaultSelected = this.selectedIndex === 0;
-
-    defaultPageCheckbox.disabled = isDefaultSelected;
-
-    if (isDefaultSelected) {
-      defaultPageCheckbox.checked = false;
-    }
-  });
 
   mainForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     if (loginButton.disabled) return;
+
     const saveIdCheckbox = document.getElementById("saveUserIdCheckbox");
     const loginData = {
       userId: userIdInput.value,
       password: passwordInput.value,
-      saveId: document.getElementById("saveUserIdCheckbox").checked,
-      destination: destinationSelect.value,
-      makeDefault: defaultPageCheckbox.checked,
+      saveId: saveIdCheckbox ? saveIdCheckbox.checked : false,
+      destination: destinationSelect ? destinationSelect.value : "",
+      makeDefault: defaultPageCheckbox ? defaultPageCheckbox.checked : false,
     };
 
     console.log("Attempting Login with:", loginData);
-    // if getting error
+
     const errorContainer = document.getElementById("serverSideError");
     if (errorContainer) {
       errorContainer.style.display = "block";
     }
+
+    // Reset Form
     userIdInput.value = "";
     passwordInput.value = "";
-    if (saveIdCheckbox) {
-      saveIdCheckbox.checked = false;
-    }
 
-    if (destinationSelect) {
-      destinationSelect.selectedIndex = 0;
-    }
+    if (saveIdCheckbox) saveIdCheckbox.checked = false;
+    if (destinationSelect) destinationSelect.selectedIndex = 0;
     if (defaultPageCheckbox) {
       defaultPageCheckbox.checked = false;
-
       handleDestinationChange();
     }
+
+    // Submit ke baad button wapas disable karein
     toggleButtonState();
   });
-
-  userIdInput.addEventListener("input", hideError);
-  passwordInput.addEventListener("input", hideError);
 });

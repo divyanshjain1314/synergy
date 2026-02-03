@@ -1,896 +1,107 @@
-@media screen {
-  html,
-  body,
-  div,
-  span,
-  h1,
-  p,
-  a,
-  img,
-  sup,
-  ul,
-  li,
-  form,
-  label {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-  }
-  p {
-    line-height: 1.35em;
-  }
-  div {
-    display: block;
-  }
-  body {
-    line-height: 1;
-  }
-  ul {
-    list-style: none;
-  }
-  html {
-    font-size: 14px;
-    background: #ccc;
-  }
-  input[type="text"],
-  input[type="password"],
-  select {
-    border: 1px solid #ababab;
-    font-size: 14px;
-    padding: 6px;
-  }
-  .passwordTextbox input[type="password"] {
-    padding-right: 20px !important;
-  }
-  .loginTextbox input[type="text"] {
-    width: 192px;
-  }
-  .passwordTextbox a {
-    margin-left: 5px;
-  }
-  #loginDialogContent input[type="password"] {
-    width: 180px;
-  }
-  a {
-    font-weight: 600;
-    color: #002f6c;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #002f6c;
-  }
-  input[type="submit"] {
-    font-family: "Trade Gothic W01 Roman", Arial, sans-serif;
-    color: white;
-    background: #397192;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    border: none;
-    height: 32px;
-    padding: 0 13px;
-    font-weight: bold;
-    font-size: 14px;
-    min-width: 100px;
-    cursor: pointer;
-  }
-  input[type="submit"]:active {
-    -webkit-transition-property: box-shadow;
-    -moz-transition-property: box-shadow;
-    -o-transition-property: box-shadow;
-    transition-property: box-shadow;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    text-decoration: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
-  .containerClear:after {
-    content: ".";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
-  }
-  .placeholder {
-    color: #bababa;
-  }
-  #wrapperContainer {
-    margin: 0 auto;
-  }
-  #wrapperContainer,
-  #pageContainer,
-  #masterHeaderContainer {
-    width: 1200px;
-  }
-  h1,
-  #siteFooterContainer,
-  p,
-  li {
-    font-style: normal;
-  }
-  h1 {
-    font-weight: 300;
-    font-size: 35px;
-    color: #807e82;
-  }
-  #masterHeaderContainer {
-    height: 80px;
-  }
-  #masterHeaderLogoContainer {
-    float: left;
-  }
-  #masterHeaderContainer .masterHeaderLogo {
-    display: block;
-    padding: 26px 0 0 66px;
-  }
-  #contentContainer,
-  #siteFooterContainer {
-    background: #ededed;
-    border-left: 1px solid white;
-    border-right: 1px solid #ededed;
-  }
-  #contentContainer {
-    border-bottom: 1px solid #e0e0e0;
-    min-height: 509px;
-  }
-  #siteFooterContainer {
-    border-top: 1px solid #fff;
-    color: #807e82;
-  }
-  #siteFooterContainer div {
-    float: left;
-  }
-  #enrollMobileFooterDiv {
-    letter-spacing: 0.5px;
-    height: 32px;
-    padding: 0 0 0 31px;
-    margin: 22px 0 22px 62px;
-    cursor: pointer;
-    text-align: left;
-  }
-  #footerLinks {
-    font-size: 12px;
-    font-weight: 600;
-    margin: 21px 0 23px 114px;
-    line-height: 1.5em;
-  }
-  #footerLinks ul {
-    float: left;
-  }
-  .footerLinksCol2 {
-    margin-left: 35px;
-  }
-  .footerLinksCol3 {
-    margin-left: 36px;
-  }
-  #siteFooterContainer #footerNotice {
-    float: right;
-    margin: 11px 82px 16px 0;
-    font-size: 10px;
-    line-height: 1.84em;
-    letter-spacing: 0.21px;
-  }
-  .loginContainer {
-    border: none;
-    height: 564px;
-    position: relative;
-    background: url(assets/images/background-login.png) no-repeat;
-  }
-  #loginDialog,
-  #signoutDialog {
-    width: 420px;
-    position: absolute;
-    top: 50px;
-    left: 390px;
-    line-height: 1.25em;
-  }
-  #loginDialogContent div,
-  #signoutDialogContent div {
-    margin-bottom: 12px;
-  }
-  #loginDialog,
-  #signoutDialog {
-    background-color: #7da1c4;
-  }
-  #loginDialogHeader,
-  #signoutDialogHeader {
-    color: white;
-    margin-top: 12px;
-    font-size: 16px;
-    font-weight: 600;
-    margin-left: 22px;
-    margin-bottom: 13px;
-  }
-  #loginDialogContent {
-    font-weight: 700;
-    font-size: 12px;
-    background: #f4f4f4;
-    border-bottom: 1px solid #dbdbdb;
-    padding: 20px 20px 10px 20px;
-    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-  }
-  #signoutDialogContent {
-    font-weight: 700;
-    font-size: 12px;
-    background: #f4f4f4;
-    border-bottom: 1px solid #dbdbdb;
-    padding: 20px 20px 10px 20px;
-    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-  }
-  #loginDialogContent div,
-  #signoutDialogContent div {
-    margin-bottom: 12px;
-  }
-  .welcomeDiv {
-    font-size: 28px;
-    text-align: left;
-    color: #807e82;
-    font-style: normal;
-    font-weight: 300;
-  }
-  #loginDialogFooter {
-    border-top: 1px solid #ffffff;
-    padding: 10px 20px;
-    font-size: 12px;
-    font-weight: normal;
-    background: #f4f4f4;
-  }
-  [type="submit"] {
-    font-family: "Trade Gothic W01 Roman", Arial, sans-serif;
-    color: white;
-    background: #397192;
-    border: none;
-    height: 32px;
-    padding: 0 13px;
-    font-weight: 700;
-    font-size: 14px;
-    min-width: 100px;
-    box-shadow: none;
-    cursor: pointer;
-  }
-  .placeholder {
-    color: rgb(117, 117, 117);
-  }
-  div.true-stamp-placeholder {
-    width: 100%;
-    padding-bottom: 5px;
-  }
-  div.true-stamp-placeholder div.trueStampDiv {
-    padding: 10px 0px 25px 0px;
-  }
-  .takeMeDiv {
-    margin: 15px 0 10px 0;
-    vertical-align: middle;
-    font-weight: normal;
-  }
-  #loginDialogContent .takeMeDiv div.selectWrapper {
-    margin: 0 0 0 5px;
-  }
-  #loginDialogContent .takeMeDiv * {
-    vertical-align: middle;
-  }
-  #loginDialogContent .takeMeDiv {
-    margin: 15px 0 10px 0;
-    font-weight: normal;
-  }
-  div.selectWrapper {
-    display: inline-block;
-    border: 1px solid #ababab;
-    padding: 0 6px 0 0px;
-    width: 250px;
-    overflow: hidden;
-  }
-  div.selectWrapper div {
-    width: 270px;
-    overflow: hidden;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  select {
-    font-size: 14px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    outline: 0;
-    -webkit-appearance: none !important;
-  }
-  .passwordLabelDiv {
-    margin: 12px 0;
-  }
-  #signoutMessage {
-    width: 375px;
-    padding-top: 30px;
-  }
-  .hidden {
-    display: none;
-  }
-  .loginTextbox {
-    margin-top: -11px;
-  }
-  .loginTextbox input {
-    width: 180px;
-  }
-  .passwordTextbox {
-    margin-top: -11px;
-  }
+:root {
+  --font-roman: "Trade Gothic W01 Roman", Arial, sans-serif;
+  --font-light: "Trade Gothic W01 Light", Arial, sans-serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --primary-blue: #002f6c;
+  --primary-red: #9e2a2b;
+  --error-red: #882b2b;
+  --bg-gray: #f4f4f4;
+  --dark-gray: #63666a;
+  --border-gray: #ababab;
+  --white: #ffffff;
+  --black: #000000;
 }
 
-@media screen {
-  html,
-  body,
-  div,
-  span,
-  h1,
-  p,
-  a,
-  img,
-  sup,
-  ul,
-  li,
-  form,
-  label {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-  }
-  p {
-    line-height: 1.35em;
-  }
-  div {
-    display: block;
-  }
-  body {
-    line-height: 1;
-    height: 100%;
-  }
-  ul {
-    list-style: none;
-  }
-  html {
-    font-family: "Trade Gothic W01 Roman", Arial, sans-serif;
-    font-size: 14px;
-    color: #000000;
-    background: #ffffff;
-    background-attachment: fixed;
-    height: 100%;
-  }
-  input[type="text"],
-  input[type="password"],
-  select {
-    border: 1px solid #ababab;
-    font-size: 14px;
-    padding: 6px;
-  }
-  a {
-    font-weight: 600;
-    color: #002f6c;
-    text-decoration: none;
-  }
-  a:visited {
-    background-color: inherit;
-    color: #002f6c;
-  }
-  a:hover {
-    color: #002f6c;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  input[type="submit"] {
-    font-family: "Trade Gothic W01 Light", Arial, sans-serif;
-    color: white;
-    background: #397192;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    border: none;
-    padding: 0 13px;
-    font-weight: normal;
-    font-size: 16px;
-    min-width: 100px;
-    cursor: pointer;
-    background-clip: border-box;
-    height: 30px;
-  }
-  input[type="submit"]:active {
-    -webkit-transition-property: box-shadow;
-    -moz-transition-property: box-shadow;
-    -o-transition-property: box-shadow;
-    transition-property: box-shadow;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    text-decoration: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
-  input[type="submit"]:not(.link-style):not(.linkStyle):not(
-      .link-button
-    ):disabled {
-    background-color: #63666a !important;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    cursor: inherit !important;
-  }
-  .containerClear:after {
-    content: ".";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
-  }
-  .placeholder {
-    color: #bababa;
-  }
-  #wrapperContainer {
-    margin: 0 auto;
-  }
-  #wrapperContainer,
-  #pageContainer,
-  #masterHeaderContainer {
-    width: 1200px;
-  }
-  h1,
-  #siteFooterContainer,
-  p,
-  li {
-    font-style: normal;
-  }
-  h1 {
-    font-family: "Trade Gothic W01 Light", arial, sans-serif;
-    font-size: 28px;
-    color: #333333;
-  }
-  #masterHeaderContainer {
-    height: 82px;
-  }
-  #masterHeaderLogoContainer {
-    float: left;
-  }
-  #masterHeaderLogoContainer a img {
-    width: 270px;
-  }
-  #masterHeaderContainer .masterHeaderLogo {
-    display: block;
-    padding: 20px 0 0 15px;
-  }
-  #contentContainer,
-  #siteFooterContainer {
-    border-right: 1px solid #222222;
-    border-left: 1px solid #222222;
-  }
-  #contentContainer {
-    background: #ffffff;
-    border-bottom: 1px solid #222222;
-    min-height: 509px;
-  }
-  #siteFooterContainer {
-    background: #d9d9d9;
-    border-top: 1px solid #222222;
-    color: #000000;
-    text-align: right;
-    font-size: 10px;
-    border-bottom: 1px solid #222222;
-    position: relative;
-    padding: 20px 0 100px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: 0.143em;
-  }
-  #siteFooterContainer #enrollMobileFooterDiv {
-    text-align: left;
-  }
-  #siteFooterContainer a {
-    font-size: 10px;
-    color: #000000;
-    text-transform: uppercase;
-    font-weight: normal;
-  }
-  #siteFooterContainer a:hover {
-    color: #000000;
-  }
-  #siteFooterContainer div {
-    float: left;
-  }
-  #enrollMobileFooterDiv {
-    background: url(assets/images/icon-sprite.png) 0 -2469px no-repeat;
-    letter-spacing: 0.143em;
-    height: 32px;
-    padding: 0 0 0 31px;
-    margin: 6px 0 6px 3%;
-    cursor: pointer;
-  }
-  .raiseTagline img {
-    width: 100%;
-  }
-  .raiseTagline {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 96px;
-    max-width: 586px;
-  }
-  a > #enrollMobileFooterDiv:hover {
-    text-decoration: underline;
-  }
-  #footerLinks {
-    margin: 6px 0 6px 3%;
-    line-height: 1.5em;
-  }
-  #footerLinks ul {
-    float: left;
-  }
-  .footerLinksCol2 {
-    margin-left: 35px;
-  }
-  .footerLinksCol3 {
-    margin-left: 36px;
-  }
-  #siteFooterContainer #footerNotice {
-    float: right;
-    margin: 6px 82px 6px 0;
-    line-height: 13px;
-    width: 275px;
-    letter-spacing: 0.143em;
-  }
-  .iconEHL {
-    background: url(assets/images/ehl.png) left no-repeat;
-    background-size: 15px;
-    padding-left: 18px;
-  }
-  .containerClear {
-    font-size: 14px;
-  }
-  .loginContainer {
-    border: none;
-    height: 670px;
-    position: relative;
-    background: url(assets/images/background-login.png) no-repeat;
-  }
-  #loginDialog,
-  #signoutDialog {
-    width: 420px;
-    position: absolute;
-    top: 50px;
-    left: 390px;
-    line-height: 1.25em;
-  }
-  #loginDialog,
-  #signoutDialog,
-  #loginDialog p {
-    line-height: 1.42857;
-  }
-  #loginDialogContent div,
-  #signoutDialogContent div {
-    margin-bottom: 12px;
-  }
-  #loginDialog,
-  #signoutDialog {
-    background-color: #63666a;
-  }
-  #loginDialogHeader,
-  #signoutDialogHeader {
-    color: white;
-    margin-top: 12px;
-    font-size: 16px;
-    font-weight: 600;
-    margin-left: 22px;
-    margin-bottom: 13px;
-  }
-  #loginDialogContent {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 12px;
-    background: #f4f4f4;
-    border-bottom: 1px solid #dbdbdb;
-    padding: 20px 20px 0 20px;
-    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-  }
-  #loginDialog a {
-    font-weight: normal;
-  }
-  #signoutDialogContent {
-    font-weight: bold;
-    font-size: 14px;
-    background: #f4f4f4;
-    border-bottom: 1px solid #dbdbdb;
-    padding: 20px 20px 10px 20px;
-    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-  }
-  #loginDialogContent div,
-  #signoutDialogContent div {
-    margin-bottom: 10px;
-  }
-  sup {
-    font-size: 14px;
-    vertical-align: top;
-  }
-  .welcomeDiv {
-    font-family: "Trade Gothic W01 Roman", Arial, sans-serif;
-    font-size: 18px;
-    text-align: left;
-    color: #002f6c;
-    font-style: normal;
-    font-weight: bold;
-    white-space: nowrap;
-    line-height: 1.1;
-  }
-  #loginDialogFooter {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    border-top: 1px solid #ffffff;
-    padding: 10px 20px;
-    font-size: 12px;
-    font-weight: normal;
-    background: #f4f4f4;
-  }
-  .placeholder {
-    color: rgb(117, 117, 117);
-  }
-  .takeMeDiv {
-    margin: 15px 0 10px 0;
-    vertical-align: middle;
-    font-weight: normal;
-  }
-  .passwordLabelDiv {
-    margin: 12px 0;
-  }
-  #signoutMessage {
-    width: 375px;
-    padding-top: 30px;
-  }
-  .hidden {
-    display: none;
-  }
-  div.selectWrapper {
-    display: inline-block;
-    border: 1px solid #ababab;
-    padding: 0 0 0 0;
-    background: white;
-    width: 270px;
-    overflow: hidden;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-  }
-  select {
-    width: 270px;
-    font-size: 14px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    outline: 0;
-    padding-right: 0;
-    display: block;
-  }
-  .selectWrapper > div {
-    overflow: hidden;
-    position: relative;
-    z-index: 0;
-  }
-  .selectWrapper:after {
-    content: "";
-    display: block;
-    width: 25px;
-    height: 32px;
-    position: absolute;
-    right: -2px;
-    top: -2px;
-    background: white;
-    margin: 2px;
-    pointer-events: none;
-    z-index: 5;
-    pointer-events: none;
-  }
-  .selectWrapper:before {
-    display: block;
-    width: 1em;
-    height: 1em;
-    position: absolute;
-    right: -2px;
-    top: -2269px;
-    background: white;
-    margin: 2px;
-    pointer-events: none;
-    z-index: 6;
-    pointer-events: none;
-  }
-  div#masterHeaderContainer + div#contentContainer {
-    border-top: 1px solid black;
-  }
-  input[type="password"] {
-    width: 228px;
-  }
-  .requiredMark {
-    color: red;
-    display: inline-block;
-    vertical-align: text-top;
-    font-weight: normal;
-    font-size: 14px;
-  }
-  .requiredMarkIconReveal {
-    color: red;
-    display: inline-block;
-    margin-left: -23px;
-  }
-  .validation-error-text {
-    color: #882b2b;
-    font-size: 14px;
-    font-weight: bold !important;
-    margin: 0;
-    padding-top: 5px;
-  }
-  .positiveBalance {
-    color: black;
-  }
-  .iconReveal {
-    width: 23px;
-    height: 18px;
-    display: block;
-    text-indent: -99999px;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-image: url(assets/images/reveal.png);
-  }
-  span.iconReveal {
-    position: relative;
-    display: inline-block;
-    left: -24px;
-    vertical-align: middle;
-    cursor: pointer;
-  }
-  .not-clickable {
-    cursor: default !important;
-  }
-  @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    div.selectWrapper {
-      height: 28px;
-    }
-  }
-  .checkboxContainer {
-    margin: 0px 0 10px 0;
-    font-weight: normal;
-  }
-  .fdicContainer {
-    background: #f7f7f7;
-  }
-  .fdicBanner {
-    padding: 8px 12px 8px 35px;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: flex-start;
-    max-width: 1200px;
-    min-width: 1000px;
-    width: 94%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .fdicBanner > svg {
-    width: 100%;
-    max-width: 418px;
-    height: 17px;
-  }
+@font-face {
+  font-family: "Trade Gothic W01 Roman";
+  src:
+    url("assets/Fonts/675331/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix")
+      format("eot"),
+    url("assets/Fonts/675331/f51d24dd-8256-43c6-ba1a-6aeae9d3f262.woff")
+      format("woff"),
+    url("assets/Fonts/675331/955ee494-66b2-4eb2-8f19-bc3a088df16d.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: bold;
 }
 
-@media print {
-  html {
-    font-family: "Trade Gothic W01 Roman", Arial, sans-serif;
-  }
-  input[type="submit"] {
-    font-family: "Trade Gothic W01 Light", Arial, sans-serif;
-  }
-  h1 {
-    font-family: "Trade Gothic W01 Light", arial, sans-serif;
-  }
-  #siteFooterContainer {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: 0.143em;
-  }
-  .hidden {
-    display: none;
-  }
-  * {
-    color: Black !important;
-  }
-  a,
-  a:visited,
-  a:link,
-  a:active {
-    text-decoration: underline;
-  }
+@font-face {
+  font-family: "Trade Gothic W01 Light";
+  src:
+    url("assets/Fonts/675355/1d699af3-0e50-4c4b-a343-42d071e85714.eot?#iefix")
+      format("eot"),
+    url("assets/Fonts/675355/537b145a-6a7d-4787-81d9-7228d3a42458.woff")
+      format("woff");
 }
 
-@media print {
-  div#masterHeaderContainer,
-  div#siteFooterContainer {
-    visibility: hidden;
-    display: none;
-  }
-  a {
-    text-decoration: none !important;
-    border: none !important;
-  }
-  .requiredMark {
-    display: inline-block;
-  }
-  div.selectWrapper {
-    display: inline-block;
-    border: 1px solid #ababab;
-    padding: 0 0 0 0;
-    background: white;
-    width: 270px;
-    overflow: hidden;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-    padding-right: 0px;
-  }
-  select {
-    width: 270px;
-    font-size: 14px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    outline: 0;
-    padding-right: 0;
-    display: block;
-  }
-  input[type="password"] {
-    width: 228px;
-  }
-  input[type="text"],
-  input[type="password"],
-  select {
-    border: 1px solid #ababab;
-    font-size: 14px;
-    padding: 6px;
-  }
-  .modulePanel {
-    width: 665px;
-    height: 312px;
-  }
-}
-#serverSideError {
-  display: none;
-}
-.errorContainer,
-.bills-error-container .error {
-  background: #dbbfbf;
-  border: 1px solid #882b2b;
-  padding: 5px;
-  color: #000000;
+html {
+  font-family: var(--font-roman);
   font-size: 14px;
-  margin-bottom: 20px;
+  color: var(--black);
+  background: var(--white);
+  background-attachment: fixed;
+  height: 100%;
 }
+
+html,
+body,
+div,
+span,
+p,
+a,
+img,
+sup,
+ul,
+li,
+form,
+label,
+nav,
+main,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+a {
+  font-weight: 600;
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:visited {
+  background-color: inherit;
+  color: var(--primary-blue);
+}
+
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+sup {
+  font-size: 14px;
+  vertical-align: super;
+}
+
+ul {
+  list-style: none;
+}
+
 #wrapperContainer {
   width: 100%;
+  margin: 0 auto;
 }
-.loginContainer {
-  padding-top: 90px;
-}
-#loginDialogHeader,
-#signoutDialogHeader {
-  height: 15px;
-  padding-top: 10px;
-}
+
 #pageContainer {
   max-width: 1200px;
   min-width: 1000px;
@@ -898,62 +109,470 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+#contentContainer {
+  height: 670px;
+  overflow: hidden;
+  background-color: black;
+  border: 1px solid #222222;
+}
+
+#masterHeaderContainer {
+  width: 1200px;
+  height: 82px;
+}
+
+#masterHeaderLogoContainer {
+  float: left;
+}
+
+#masterHeaderContainer .masterHeaderLogo {
+  display: block;
+  padding: 20px 0 0 15px;
+  width: 270px;
+}
+
+.containerClear {
+  font-size: 14px;
+}
+
+.loginContainer {
+  padding-top: 90px;
+  border: none;
+  height: 670px;
+  position: relative;
+  background: url(assets/images/background-login.png) no-repeat;
+}
+
 #loginDialog,
 #signoutDialog {
   position: static;
   margin-left: auto;
   margin-right: auto;
+  background-color: var(--dark-gray);
+  line-height: 1.42857;
+  width: 420px;
 }
-#siteFooterContainer #footerNotice {
-  margin-right: 30px;
+
+#loginDialogHeader,
+#signoutDialogHeader {
+  font-family: var(--font-roman);
+  color: var(--white);
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 22px;
+  margin-bottom: 13px;
+  height: 15px;
+  padding-top: 10px;
 }
-#contentContainer {
-  height: 670px;
-  overflow: hidden;
-  background-color: black;
+
+#signoutDialogContent {
+  font-weight: bold;
+  font-size: 14px;
+  background: var(--bg-gray);
+  border-bottom: 1px solid #dbdbdb;
+  padding: 20px 20px 10px 20px;
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
 }
+
+#loginDialogContent div,
+#signoutDialogContent div {
+  margin-bottom: 10px;
+}
+
+#signoutMessage {
+  width: 375px;
+  padding-top: 30px;
+}
+
+#loginDialogContent {
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 12px;
+  background: var(--bg-gray);
+  border-bottom: 1px solid #dbdbdb;
+  padding: 20px 20px 0 20px;
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.welcomeDiv {
+  font-family: var(--font-roman);
+  font-size: 18px;
+  text-align: left;
+  color: var(--primary-blue);
+  font-style: normal;
+  font-weight: bold;
+  white-space: nowrap;
+  line-height: 1.1;
+}
+
 .requiredFieldsInstructions {
   font-weight: normal;
   display: block;
   margin-bottom: 7px;
 }
+
+.requiredMark {
+  color: red;
+  display: inline-block;
+  vertical-align: text-top;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+#serverSideError {
+  display: none;
+}
+.errorContainer,
+.bills-error-container .error {
+  background: #dbbfbf;
+  border: 1px solid var(--error-red);
+  padding: 5px;
+  color: var(--black);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+#loginDialog a {
+  font-weight: normal;
+}
+
+.passwordLabelDiv {
+  margin: 12px 0;
+}
+
+.passwordTextbox {
+  margin-top: -11px;
+}
+
+#loginDialogContent .passwordTextbox input {
+  width: 180px;
+  padding-right: 20px !important;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: 1px solid var(--border-gray);
+  font-size: 14px;
+  padding: 6px;
+}
+
+.iconReveal {
+  position: relative;
+  display: inline-block;
+  left: -24px;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 23px;
+  height: 18px;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url(assets/images/reveal.png);
+}
+
+.passwordTextbox a {
+  margin-left: 5px;
+}
+
+.loginTextbox {
+  margin-top: -11px;
+}
+
+.loginTextbox input[type="text"] {
+  width: 192px;
+}
+
+input[type="submit"] {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  border: none;
+  padding: 0 13px;
+  font-weight: normal;
+  font-size: 16px;
+  min-width: 100px;
+  cursor: pointer;
+  background-clip: border-box;
+  height: 30px;
+}
+
+input[type="submit"]:not(.link-style):not(.linkStyle):not(
+    .link-button
+  ):disabled {
+  background-color: var(--dark-gray) !important;
+  box-shadow: none;
+  cursor: inherit !important;
+}
+
 input[type="submit"]#loginBtn {
-  background-color: #9e2a2b;
-  background: #9e2a2b;
+  color: var(--white);
+  background-color: var(--primary-red);
+  background: var(--primary-red);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-family: var(--font-light);
+}
+
+input[type="submit"]:active {
+  -webkit-transition-property: box-shadow;
+  -moz-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  text-decoration: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-sup {
-  font-size: 14px;
-  vertical-align: super;
+
+#loginDialogContent .takeMeDiv {
+  margin: 15px 0 10px 0;
+  font-weight: normal;
+  vertical-align: middle;
 }
 
-@font-face {
-  font-family: "Trade Gothic W01 Roman";
-  src: url("assets/Fonts/675331/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix");
-  src:
-    url("assets/Fonts/675331/2e9af08f-0faf-45e3-9767-78a700434af3.eot?#iefix")
-      format("eot"),
-    url("assets/Fonts/675331/f51d24dd-8256-43c6-ba1a-6aeae9d3f262.woff")
-      format("woff"),
-    url("assets/Fonts/675331/955ee494-66b2-4eb2-8f19-bc3a088df16d.ttf")
-      format("truetype"),
-    url("assets/Fonts/675331/d5153ad4-7c93-4757-9147-640e69ec4801.svg#d5153ad4-7c93-4757-9147-640e69ec4801")
-      format("svg");
-  font-style: normal;
-  font-weight: bold;
+#loginDialogContent .takeMeDiv * {
+  vertical-align: middle;
 }
-@font-face {
-  font-family: "Trade Gothic W01 Light";
-  src: url("assets/Fonts/675355/1d699af3-0e50-4c4b-a343-42d071e85714.eot?#iefix");
-  src:
-    url("assets/Fonts/675355/1d699af3-0e50-4c4b-a343-42d071e85714.eot?#iefix")
-      format("eot"),
-    url("assets/Fonts/675355/537b145a-6a7d-4787-81d9-7228d3a42458.woff")
-      format("woff"),
-    url("assets/Fonts/675355/8e50278c-45cd-4808-b774-24767d958f17.ttf")
-      format("truetype"),
-    url("assets/Fonts/675355/d918b947-5fcb-42e2-8286-a98a801876de.svg#d918b947-5fcb-42e2-8286-a98a801876de")
-      format("svg");
+
+.selectWrapper {
+  display: inline-block;
+  border: 1px solid var(--border-gray);
+  padding: 0;
+  background: var(--white);
+  width: 270px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+  height: 28px;
+}
+
+#loginDialogContent .selectWrapper {
+  margin: 0 0 0 5px;
+}
+
+.selectWrapper > div {
+  width: 270px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  margin: 0 !important;
+}
+
+.selectWrapper:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 32px;
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  background: var(--white);
+  margin: 2px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.selectWrapper:before {
+  content: url(assets/images/icon-sprite.png);
+  display: block;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  right: -2px;
+  top: -2269px;
+  background: var(--white);
+  margin: 2px;
+  pointer-events: none;
+  z-index: 6;
+}
+
+select {
+  width: 270px;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: 0;
+  padding-right: 0;
+  display: block;
+  padding: 6px;
+  -webkit-appearance: none !important;
+}
+
+.positiveBalance {
+  color: var(--black);
+}
+
+#loginDialogFooter {
+  font-family: var(--font-sans);
+  border-top: 1px solid var(--white);
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: normal;
+  background: var(--bg-gray);
+}
+
+p {
+  line-height: 1.35em;
+}
+
+#siteFooterContainer,
+p,
+li {
+  font-style: normal;
+}
+
+#siteFooterContainer {
+  background: #d9d9d9;
+  border: 1px solid #222222;
+  color: var(--black);
+  text-align: right;
+  font-size: 10px;
+  position: relative;
+  padding: 20px 0 100px;
+  font-family: var(--font-sans);
+  letter-spacing: 0.143em;
+}
+
+#siteFooterContainer nav,
+#siteFooterContainer div {
+  float: left;
+}
+
+.raiseTagline {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 96px;
+  max-width: 586px;
+}
+
+.raiseTagline img {
+  width: 100%;
+}
+
+#siteFooterContainer a {
+  font-size: 10px;
+  color: var(--black);
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+#siteFooterContainer a:hover {
+  color: var(--black);
+}
+
+#siteFooterContainer #enrollMobileFooterDiv {
+  text-align: left;
+}
+
+#enrollMobileFooterDiv {
+  background: url(assets/images/icon-sprite.png) 0 -2469px no-repeat;
+  letter-spacing: 0.143em;
+  height: 32px;
+  padding: 0 0 0 31px;
+  margin: 6px 0 6px 3%;
+  cursor: pointer;
+}
+
+a > #enrollMobileFooterDiv:hover {
+  text-decoration: underline;
+}
+
+#footerLinks {
+  margin: 6px 0 6px 3%;
+  line-height: 1.5em;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#footerLinks ul {
+  float: left;
+}
+
+.footerLinksCol2 {
+  margin-left: 35px;
+}
+
+.footerLinksCol3 {
+  margin-left: 36px;
+}
+
+#siteFooterContainer #footerNotice {
+  float: right;
+  margin: 6px 82px 6px 0;
+  line-height: 13px;
+  width: 275px;
+  letter-spacing: 0.143em;
+  font-size: 10px;
+}
+
+#siteFooterContainer #footerNotice {
+  margin-right: 30px;
+}
+
+.iconEHL {
+  background: url(assets/images/ehl.png) left no-repeat;
+  background-size: 15px;
+  padding-left: 18px;
+}
+
+#loginDialog p {
+  line-height: 1.42857;
+}
+
+.requiredMarkIconReveal {
+  color: red;
+  display: inline-block;
+  margin-left: -23px;
+}
+
+.validation-error-text {
+  color: var(--error-red);
+  font-size: 14px;
+  font-weight: bold !important;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.not-clickable {
+  cursor: default !important;
+}
+
+.checkboxContainer {
+  margin: 0 0 10px 0;
+  font-weight: normal;
+}
+
+.fdicContainer {
+  background: #f7f7f7;
+}
+
+.fdicBanner {
+  padding: 8px 12px 8px 35px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  max-width: 1200px;
+  min-width: 1000px;
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fdicBanner > svg {
+  width: 100%;
+  max-width: 418px;
+  height: 17px;
 }

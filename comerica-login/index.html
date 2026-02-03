@@ -8,7 +8,7 @@
     <script src="script.js"></script>
   </head>
   <body class="bodyContainer">
-    <div class="fdicContainer">
+    <aside class="fdicContainer">
       <div class="fdicBanner">
         <svg
           viewBox="0 0 418 17"
@@ -33,13 +33,11 @@
           ></path>
         </svg>
       </div>
-    </div>
-
-    <form id="mainForm" autocomplete="off">
-      <span id="campaignControlManager"></span>
-      <div id="wrapperContainer">
-        <div id="pageContainer">
-          <div id="masterHeaderContainer">
+    </aside>
+    <main id="wrapperContainer">
+      <div id="pageContainer">
+        <form id="mainForm" autocomplete="off">
+          <header id="masterHeaderContainer">
             <div id="masterHeaderLogoContainer">
               <a id="logoLink" class="not-clickable" target="_self"
                 ><img
@@ -48,13 +46,13 @@
                   src="assets/images/logo.png"
               /></a>
             </div>
-          </div>
+          </header>
 
-          <div id="contentContainer">
+          <section id="contentContainer">
             <div class="containerClear">
               <div class="loginContainer">
                 <div class="signoutSection" style="display: none">
-                  <div id="signoutDialog">
+                  <article id="signoutDialog">
                     <div id="signoutDialogHeader">You are now logged out.</div>
                     <div id="signoutDialogContent">
                       <a href="#" id="loginAgainAnchor"> Log In again? </a>
@@ -66,9 +64,10 @@
                         />
                       </div>
                     </div>
-                  </div>
+                  </article>
                 </div>
-                <div id="loginDialog">
+
+                <article id="loginDialog">
                   <div class="signonWrapper">
                     <div id="loginDialogHeader">Log In</div>
                     <div id="loginDialogContent">
@@ -122,7 +121,6 @@
                           maxlength="32"
                           id="passwordInput"
                           class="loginPassword requiredFormField"
-                          style="width: 180px"
                           value=""
                         /><span class="iconReveal"></span>
                         <span class="requiredMarkIconReveal">* </span>
@@ -222,11 +220,11 @@
                       </p>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
             </div>
-          </div>
-          <div id="siteFooterContainer">
+          </section>
+          <footer id="siteFooterContainer">
             <div class="raiseTagline">
               <img
                 id="themeImage"
@@ -239,7 +237,7 @@
                 Learn more about <br />mobile banking
               </div>
             </a>
-            <div id="footerLinks">
+            <nav id="footerLinks">
               <ul class="footerLinksCol1">
                 <li>
                   <a id="termsOfUseLink" href="#" target="_blank"
@@ -285,7 +283,7 @@
                   <a id="contactUsLink" href="#" target="_blank">Contact Us</a>
                 </li>
               </ul>
-            </div>
+            </nav>
             <div id="footerNotice">
               <p></p>
               <div id="footerNoticeContent" class="modulePanel">
@@ -296,9 +294,9 @@
               <p></p>
             </div>
             <br clear="all" />
-          </div>
-        </div>
+          </footer>
+        </form>
       </div>
-    </form>
+    </main>
   </body>
 </html>
