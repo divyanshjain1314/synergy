@@ -56,7 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
     revealPasswordIcon.addEventListener("click", () => {
       const isPassword = passwordInput.type === "password";
       passwordInput.type = isPassword ? "text" : "password";
-      revealPasswordIcon.classList.toggle("isVisible");
+      revealPasswordIcon.classList.add("isVisible");
+      setTimeout(() => {
+        passwordInput.type = "password";
+        revealPasswordIcon.classList.remove("isVisible");
+      }, 200);
     });
   }
 
